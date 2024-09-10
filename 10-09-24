@@ -1,0 +1,17 @@
+frase = ["Foi magnifica a festa ontem."]
+
+palavras = 0
+vPalavras = 0
+vogais = "aeiouAEIOU"
+
+# separar palavra por palavra
+for i in range(len(frase)):
+  palavras = frase[i].split()
+
+# descobrir quais palavras possuem vogais em par
+for i in range(len(palavras)):
+  for char in palavras[i]:
+    if char in vogais:
+        vPalavras += 1
+    if vPalavras % 2 == 0:
+      print(palavras[i])
